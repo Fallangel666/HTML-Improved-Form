@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <span class="required-field">*</span>
+
 </head>
 <body>
     <nav>
@@ -15,19 +17,25 @@
         <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" required
+                min="2" max="35" >
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <input type="text" id="lastname" name="lastname" required
+                min="2" max="35" >
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age"
+                min="21" max="120">
+                <h5>One must be age 21 or older to enther the contest</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" required>
                 </div>
                 <div>
                     <label for="city">Your City</label>
@@ -86,7 +94,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="number" id="zip" name="zip">
                 </div>
             </fieldset>
 
@@ -127,12 +135,12 @@
                     <label for="ocean">Ocean View</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="drinks" name="extras" value="Drinks Package"> 
+                    <input type="checkbox" id="drinks" name="extras" value="Drinks Package" required> 
                     <label for="drinks">All-inclusive Drinks Package</label>
                 </div>
             </fieldset>
             
-            <input type="submit" value="Enter the Contest!">
+            <input type="submit" value="Enter the Contest!" required>
         </form>
     </main>
     <footer>
